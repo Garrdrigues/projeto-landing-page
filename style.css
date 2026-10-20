@@ -1,0 +1,107 @@
+/* Reset básico e Fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1a365d; /* Azul corporativo escuro */
+    color: #ffffff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #e2e8f0;
+}
+
+button {
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #2b6cb0;
+}
+
+/* Seção de Contato */
+#contato {
+    padding: 60px 20px;
+}
+
+#contato h2 {
+    text-align: center;
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+#contato p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #718096;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+input:disabled {
+    background-color: #edf2f7;
+    color: #a0aec0;
+}
+
+#btnSubmit {
+    background-color: #38a169; /* Verde para confirmar envio */
+    margin-top: 10px;
+}
+
+#btnSubmit:hover {
+    background-color: #2f855a;
+}
