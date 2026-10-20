@@ -3,44 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GR Consultoria Digital</title>
+    <title>GR Consultoria | Gestão e Processos</title>
+    <!-- Fonte do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Ícones FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Cabeçalho e Call to Action -->
-    <header>
-        <div class="container">
-            <h1>GR Consultoria Digital</h1>
-            <p>Soluções inteligentes e gestão de dados para alavancar os processos do seu negócio.</p>
-            <button id="btnCta">Agendar Consultoria</button>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">GR Consultoria</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#servicos">Soluções</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="hero">
+        <div class="container hero-content">
+            <h1>Inteligência e Eficiência para o seu Negócio</h1>
+            <p>Transforme dados em decisões estratégicas e otimize seus processos operacionais com engenharia de ponta.</p>
+            <button id="btnCta" class="btn-primary">Agendar Diagnóstico</button>
         </div>
     </header>
 
-    <!-- Área de Contato e Integração ViaCEP -->
-    <section id="contato">
+    <!-- Serviços (Grid) -->
+    <section id="servicos" class="services">
         <div class="container">
-            <h2>Entre em Contato</h2>
-            <p>Preencha os dados abaixo e entraremos em contato.</p>
-            
-            <form id="formContato">
-                <input type="text" id="nome" placeholder="Seu Nome Completo" required>
-                <input type="email" id="email" placeholder="Seu E-mail" required>
-                
-                <!-- Campos para a API do ViaCEP -->
-                <div class="cep-group">
-                    <input type="text" id="cep" placeholder="CEP (Somente números)" maxlength="8" required>
+            <h2 class="section-title">Nossas Soluções</h2>
+            <div class="services-grid">
+                <div class="card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Análise de Dados</h3>
+                    <p>Estruturação de indicadores e dashboards para tomada de decisão assertiva.</p>
                 </div>
-                <input type="text" id="rua" placeholder="Rua" disabled>
-                <input type="text" id="cidade" placeholder="Cidade" disabled>
-                <input type="text" id="estado" placeholder="Estado (UF)" disabled>
+                <div class="card">
+                    <i class="fa-solid fa-gears"></i>
+                    <h3>Engenharia de Processos</h3>
+                    <p>Mapeamento e otimização de fluxos operacionais para redução de gargalos.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <h3>Gestão da Qualidade</h3>
+                    <p>Implementação de normas e auditorias para garantir a excelência contínua.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <textarea id="mensagem" placeholder="Descreva brevemente sua necessidade..." required></textarea>
+    <!-- Área de Contato -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2 class="section-title">Fale com um Especialista</h2>
+            <p class="section-subtitle">Preencha o formulário e entraremos em contato para entender seu cenário.</p>
+            
+            <form id="formContato" class="form-grid">
+                <div class="input-group full-width">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" placeholder="Ex: João da Silva" required>
+                </div>
                 
-                <button type="submit" id="btnSubmit">Enviar Mensagem</button>
+                <div class="input-group full-width">
+                    <label for="email">E-mail Corporativo</label>
+                    <input type="email" id="email" placeholder="joao@empresa.com.br" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="cep">CEP <span id="cep-loading" class="hidden"><i class="fa-solid fa-spinner fa-spin"></i></span></label>
+                    <input type="text" id="cep" placeholder="00000-000" maxlength="9" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="rua">Logradouro</label>
+                    <input type="text" id="rua" placeholder="Rua, Avenida..." disabled>
+                </div>
+
+                <div class="input-group">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" placeholder="Cidade" disabled>
+                </div>
+
+                <div class="input-group">
+                    <label for="estado">Estado</label>
+                    <input type="text" id="estado" placeholder="UF" disabled>
+                </div>
+
+                <div class="input-group full-width">
+                    <label for="mensagem">Como podemos ajudar?</label>
+                    <textarea id="mensagem" placeholder="Descreva brevemente o seu desafio atual..." required></textarea>
+                </div>
+                
+                <button type="submit" id="btnSubmit" class="btn-primary full-width">Solicitar Contato</button>
             </form>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 GR Consultoria. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Container do Toast (Notificações) -->
+    <div id="toast-container"></div>
 
     <script src="script.js"></script>
 </body>
