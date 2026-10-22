@@ -2,9 +2,9 @@
     --navy-950: #050d1a;
     --navy-900: #0a192f;
     --navy-800: #112240;
-    --royal-600: #005eb8; /* Azul executivo McKinsey */
+    --royal-600: #005eb8; 
     --royal-500: #1d70b8;
-    --emerald-600: #00875a; /* Verde institucional BCG */
+    --emerald-600: #00875a; 
     --slate-900: #0f172a;
     --slate-700: #334155;
     --slate-500: #64748b;
@@ -166,7 +166,7 @@ body {
     width: 100%;
 }
 
-/* Botões Padrão Consultoria (Bordas Retas / Sharp) */
+/* Botões Padrão Consultoria */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -365,7 +365,7 @@ body {
     color: var(--slate-300);
 }
 
-/* Áreas de Prática (Grid Arquitetônico) */
+/* Áreas de Prática */
 .practices-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
